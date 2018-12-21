@@ -16,34 +16,57 @@ FSJS project 2 - List Filter and Pagination
    will only be used inside of a function, then it can be locally
    scoped to that function.
 ***/
-const StudentItem = document.getElementsByClassName('student-item')
+let student = document.querySelector('student-Item');
+let page = document.querySelector('Page');
+Console.log(page)
+
+
+function showpage{
+    for(var i = 0; i < student.Lenght; i++) {
+        student[i] . style.display = "none";
+    }
+}
+
+showPage(student.pageNum = 0);
+//number of pages 
+  var pages = student.Lenght110
+
+  //Define range from zero to 9
+  let lower = pageNum *10;
+  let upper = pageNum * 10 + (10-1);
+
+  //page
+  for(var i = 0; i z = upper; i ++) {
+    list(i). style.display = "block"
+  }
+
+  //Add functionality
+//Creates space on DOM to add page buttons
+  var pagination = document.createElement("div");
+  //adding
+  Page.appendchild(pagination);
+  //
+  innerHTML = "<button><1 button>"; 
+  //add class of Pagination
+  pagination.classname = "pagination";
+
+  //add unorder list to new space for buttons
+    var unorderlist = document.createElement('01')
+    pagination.appendchild(unorderList);
+//for every page add li tages with a page number
+addItemButton.addEventListener('click', () => {
+  let ul = document.getElementsByTagname('ul')[0];
+  let li = document.createrElement('li');
+  li.textContent = addItemInput.value;
+  ul.appendchild(li);
+  
+}
+   
 
 
 
-/***
-   Create the `showPage` function to hide all of the items in the
-   list except for the ten you want to show.
-
-   Pro Tips:
-     - Keep in mind that with a list of 54 students, the last page
-       will only display four.
-     - Remember that the first student has an index of 0.
-     - Remember that a function `parameter` goes in the parens when
-       you initially define the function, and it acts as a variable
-       or a placeholder to represent the actual function `argument`
-       that will be passed into the parens later when you call or
-       "invoke" the function
-***/
 
 
-
-/***
    Create the `appendPageLinks function` to generate, append, and add
    functionality to the pagination buttons.
 ***/
-
-
-
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
