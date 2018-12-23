@@ -54,13 +54,18 @@ showPage(student.pageNum = 0);
     var unorderlist = document.createElement('01')
     pagination.appendchild(unorderList);
 //for every page add li tages with a page number
-addItemButton.addEventListener('click', () => {
-  let ul = document.getElementsByTagname('ul')[0];
-  let li = document.createrElement('li');
-  li.textContent = addItemInput.value;
-  ul.appendchild(li);
-  
-}
+    for(let i=1;i<=numOfPages;i++){
+    const li = document.createElement('li');
+    if(i === 1){
+    li.className = 'active';}
+    linkList.appendChild(li);
+    const aTag = document.createElement('a');
+    aTag.setAttribute('href','#');
+    aTag.textContent = i;
+    li.appendChild(aTag);
+
+    }
+   
    
 
 
