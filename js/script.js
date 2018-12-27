@@ -60,6 +60,6 @@ showPage(student.pageNum = 0);
 
 
 
-   Create the `appendPageLinks function` to generate, append, and add
+/***   Create the `appendPageLinks function` to generate, append, and add
    functionality to the pagination buttons.
 ***/
