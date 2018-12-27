@@ -21,7 +21,7 @@ let page = document.querySelector('Page');
 Console.log(page)
 
 
-function showpage{
+function showpage () {
     for(var i = 0; i < student.Lenght; i++) {
         student[i] . style.display = "none";
     }
@@ -36,7 +36,7 @@ showPage(student.pageNum = 0);
   let upper = pageNum * 10 + (10-1);
 
   //page
-  for(var i = 0; i z = upper; i ++) {
+  for(var i = 0; i  <= upper; i ++) {
     list(i). style.display = "block"
   }
 
@@ -54,19 +54,7 @@ showPage(student.pageNum = 0);
     var unorderlist = document.createElement('01')
     pagination.appendchild(unorderList);
 //for every page add li tages with a page number
-    for(let i=1;i<=numOfPages;i++){
-    const li = document.createElement('li');
-    if(i === 1){
-    li.className = 'active';}
-    linkList.appendChild(li);
-    const aTag = document.createElement('a');
-    aTag.setAttribute('href','#');
-    aTag.textContent = i;
-    li.appendChild(aTag);
 
-    }
-   
-   
 
 
 
