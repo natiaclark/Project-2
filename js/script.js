@@ -54,7 +54,12 @@ showPage(student.pageNum = 0);
     var unorderlist = document.createElement('01')
     pagination.appendchild(unorderList);
 //for every page add li tages with a page number
-
+    for(let i = 0; i <= pagecount; i ++) {
+      const li = document.createElement("li")
+       unorderlist.appendChild(listitem);
+     
+      }
+   
 
 
 
