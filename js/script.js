@@ -18,26 +18,26 @@ FSJS project 2 - List Filter and Pagination
 ***/
 let student = document.querySelector('student-Item');
 let page = document.querySelector('Page');
-Console.log(page)
+
 
 
 function showpage () {
     for(var i = 0; i < student.Lenght; i++) {
         student[i] . style.display = "none";
+       showPage(student.pageNum = 0);
+       //number of pages 
+  var pages = student.Lenght110
     }
 }
 
-showPage(student.pageNum = 0);
-//number of pages 
-  var pages = student.Lenght110
 
-  //Define range from zero to 9
+//page
+  for(var i = 0; i  <= upper; i ++) {
+    list(i). style.display = "block"
+   //Define range from zero to 9
   let lower = pageNum *10;
   let upper = pageNum * 10 + (10-1);
 
-  //page
-  for(var i = 0; i  <= upper; i ++) {
-    list(i). style.display = "block"
   }
 
   //Add functionality
