@@ -17,10 +17,12 @@ FSJS project 2 - List Filter and Pagination
    scoped to that function.
 ***/
 //the size of the page
+//the size of the page
 let student = document.querySelector('student-Item');
 let page = document.querySelector('Page');
-
-
+const button = document.querySelector('button.description')
+const addItemInput = document.querySelector('input.addItemInput');
+const addItemButton = document.querySelector('button.addItemButton');
 
 
 function showpage () {
@@ -51,19 +53,31 @@ function showpage () {
   var pagination = document.createElement("div");
   var unorderlist = document.createElement('ul')
   //add class of Pagination
- pagination.classname = "pagination"; 
-//adding
-    
+  pagination.classname = "pagination"; 
 
-//
-  innerHTML = "<button><button>"; 
-  //for every page add li tages with a page number
-  for(let i = 0; i <= pagecount; i ++) {
-   const li = document.createElement("li")
-    unorderlist.appendChild(listitem);
-     
-      }
-   
+
+  //adding
+
+//for every page add li tages with a page number
+for(let i = 0; i <= pagecount; i ++) {
+ const li = document.createElement("li")
+  unorderlist.appendChild(listitem);   
+
+  
+  
+      button.addEventListener('click', () => {
+   package.innerHTML = input.value + ':';
+   //adding buttons
+ addItemButton.addEventListener('click', () => {
+   let ul = doucument.getElementByTagName('ul')[0];
+   let li = document.createElement('li');
+   li.textContent = addItemInput.value;
+   ul.appendChild(li);
+
+
+});
+
+ });  
 
 
 
