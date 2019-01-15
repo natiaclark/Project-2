@@ -16,52 +16,54 @@ FSJS project 2 - List Filter and Pagination
    will only be used inside of a function, then it can be locally
    scoped to that function.
 ***/
+//the size of the page
 let student = document.querySelector('student-Item');
 let page = document.querySelector('Page');
 
 
 
+
 function showpage () {
-    for(var i = 0; i < student.Lenght; i++) {
+    for(var i = 0; i < student.length; i++) {
         student[i] . style.display = "none";
-       showPage(student.pageNum = 0);
-       //number of pages 
-  var pages = student.Lenght110
-    }
-}
-
-
-//page
-  for(var i = 0; i  <= upper; i ++) {
+        showpage(student.pageNum = 0)
+   //page
+    //Define range from zero to 9
+  let upper = page * 0;
+  let lower = upper * - 10;
+  for(var i = 0; i <= student.Length; i++) { 
+     if( i >= lower && i <= upper){
     list(i). style.display = "block"
-   //Define range from zero to 9
-  let lower = pageNum *10;
-  let upper = pageNum * 10 + (10-1);
+     }else {
+      list(i). style.display = "none";
+   
+    }
+ 
 
   }
 
-  //Add functionality
+   }
+}
+
+
+//Add functionality
 //Creates space on DOM to add page buttons
   var pagination = document.createElement("div");
-  //adding
-  Page.appendchild(pagination);
-  //
-  innerHTML = "<button><1 button>"; 
+  var unorderlist = document.createElement('ul')
   //add class of Pagination
-  pagination.classname = "pagination";
+ pagination.classname = "pagination"; 
+//adding
+    
 
-  //add unorder list to new space for buttons
-    var unorderlist = document.createElement('01')
-    pagination.appendchild(unorderList);
-//for every page add li tages with a page number
-    for(let i = 0; i <= pagecount; i ++) {
-      const li = document.createElement("li")
-       unorderlist.appendChild(listitem);
+//
+  innerHTML = "<button><button>"; 
+  //for every page add li tages with a page number
+  for(let i = 0; i <= pagecount; i ++) {
+   const li = document.createElement("li")
+    unorderlist.appendChild(listitem);
      
       }
    
-
-
 
 
 
