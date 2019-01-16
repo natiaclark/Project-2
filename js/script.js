@@ -18,19 +18,28 @@ FSJS project 2 - List Filter and Pagination
 ***/
 //the size of the page
 //the size of the page
-let student = document.querySelector('student-Item');
+const studentList = document.getElementById('studentList');
+const listDiv = document.querySelector('.list');
+let student = document.querySelectorAll('student-item');
 let page = document.querySelector('Page');
-const button = document.querySelector('button.description')
+const button = document.querySelector('button')
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 
 
-function showpage () {
-    for(var i = 0; i < student.length; i++) {
+
+const showPage = (list, Length) => {
+    for(let i = 0; i < length.length; i++) {
         student[i] . style.display = "none";
-        showpage(student.pageNum = 0)
+        showPage(student, 1);
+
+       
+     
+        
+   
+   
    //page
-    //Define range from zero to 9
+   //Define range from zero to 9
   let upper = page * 0;
   let lower = upper * - 10;
   for(var i = 0; i <= student.Length; i++) { 
@@ -45,7 +54,7 @@ function showpage () {
   }
 
    }
-}
+
 
 
 //Add functionality
@@ -53,29 +62,36 @@ function showpage () {
   var pagination = document.createElement("div");
   var unorderlist = document.createElement('ul')
   //add class of Pagination
-  pagination.classname = "pagination"; 
+  pagination.className = "pagination"; 
 
 
   //adding
 
 //for every page add li tages with a page number
-for(let i = 0; i <= pagecount; i ++) {
+for(let i = 1; i <= page; i ++) {
  const li = document.createElement("li")
-  unorderlist.appendChild(listitem);   
+  li.appendChild();   
 
   
   
-      button.addEventListener('click', () => {
-   package.innerHTML = input.value + ':';
-   //adding buttons
- addItemButton.addEventListener('click', () => {
-   let ul = doucument.getElementByTagName('ul')[0];
-   let li = document.createElement('li');
-   li.textContent = addItemInput.value;
-   ul.appendChild(li);
+     
+//adding buttons
 
+studentList.addEventListener('click', () => {
+   if (listDiv.style.display == 'none') {
+      studentList.textcontent = 'hide list';
+      listDiv.style.display = 'block';
+   }  else {
+      studentList.textContent = 'show list'
+      listDiv.style.display = 'none';
+   }
+     
+}); 
 
-});
+button.addItemButton('click', () => {
+ package.innerHTML = input.value + ':';
+
+})}};
 
 
 
