@@ -18,19 +18,19 @@ FSJS project 2 - List Filter and Pagination
 ***/
 //the size of the page
 //the size of the page
-const studentitem = docuemtn.getElementsByClassName('student-item');
-const listDiv = document.querySelector('.list');
-let student = document.querySelectorAll('student-item');
-let page = document.querySelector('Page');
+const studentItem = document.getElementsByClassName('studentItem');
+const pageDiv = document.querySelector('.page');
 const button = document.querySelector('button')
+const studentList = document.querySelector('student-list')
+let student = document.querySelectorAll('student-item');
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 
 
 
-const showPage = ("list, Length") 
+function showPage(list) { 
     for(let i = 0; i < list.length; i++) {
-        "list[i]".style.display = "none";
+        list[i].style.display = "none";
         showPage(student, 1);
 
        
@@ -42,7 +42,7 @@ const showPage = ("list, Length")
    //Define range from zero to 9
   let upper = page * 0;
   let lower = upper * - 10;
-  for(var i = 0; i <= student.Length; i++) { 
+  for(const i = 0; i <= list.Length; i++) { 
      if( i >= lower && i <= upper){
     list(i). style.display = "block"
      }else {
@@ -53,9 +53,9 @@ const showPage = ("list, Length")
 
   }
 
-   }
+   }}
 
-
+function showPage(studentitem)
 
 //Add functionality
 //Creates space on DOM to add page buttons
@@ -65,6 +65,7 @@ const showPage = ("list, Length")
   pagination.className = "pagination"; 
 
 
+  //adding
 
 //for every page add li tages with a page number
 for(let i = 1; i <= page; i ++) {
@@ -72,17 +73,16 @@ for(let i = 1; i <= page; i ++) {
   li.appendChild();   
 
   
-  
      
 //adding buttons
 
-studentList.addEventListener('click', () => {
-   if (listDiv.style.display == 'none') {
-      studentList.textcontent = 'hide list';
+student-item.addEventListener('click', () => {
+   if (pageDiv.style.display == 'none') {
+      studentItem.textcontent = 'hide list';
       listDiv.style.display = 'block';
    }  else {
-      studentList.textContent = 'show list'
-      listDiv.style.display = 'none';
+      studentItem.textContent = 'show list'
+      pageDiv.style.display = 'none';
    }
      
 }); 
@@ -90,4 +90,4 @@ studentList.addEventListener('click', () => {
 button.addItemButton('click', () => {
  package.innerHTML = input.value + ':';
 
-})}};
+})};
