@@ -17,57 +17,77 @@ FSJS project 2 - List Filter and Pagination
    scoped to that function.
 ***/
 const studentItem = document.getElementsByClassName('studentItem');
-const pageDiv = document.querySelector('.page');
+const a = studentItem .getElementsByClassName('href');
+const pageDiv = document.querySelector('.pageDiv');
 const button = document.querySelector('button')
-const studentList = document.querySelector('student-list')
+const studentList = document.getElementsByTagName('li')[0];
 const student = document.querySelectorAll('student-item');
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
+const div = document.createElement('div');
 
 
+//the size of the page
+//the size of the page
 
-function showPage(list) { 
-    for(let i = 0; i < list.length; i++) {
-        list[i].style.display = "none";
-        showPage(student, 1);
+studentList.addEventListener('click', () => {
+   studentList.textContent = studentList.textContent.hide();
+
+})
+
+studentList.addEventListener('click', () => {
+   studentList.textContent = studentList.textContent.show();
+
+})
+
+
 
        
      
         
    
    
-   //page
-   //Define range from zero to 9
-  let upper = page * 0;
-  let lower = upper * - 10;
-  for(const i = 0; i <= list.Length; i++) { 
-     if( i >= lower && i <= upper){
-    list(i). style.display = "block"
-     }else {
-      list(i). style.display = "none";
+
+
+const appendPageLinks = (link) => {
+   let pa
    
-    }
+   
+   
+   
+   function showPage(list) { 
+   for(let i = 0; i < a.length; i++) {
+       a[i].addEventListener("click", function() {
+         const current = document.getElementsByClassName("active")
+         current[0].className = current[0].className.replace("active", "");
+         this.className += "active";
+       });
+
+       }
+
+  //page
+   //Define range from zero to 9
+   let upper = page * 0;
+   let lower = upper * - 10;
+   for(const i = 0; i <= list.Length; i++) { 
+      if( i >= lower && i <= upper){
+     list(i). style.display = "block"
+      }else {
+       list(i). style.display = "none";
+    
+     }
+  
  
-
-  }
-
-   }}
-
-function showPage(studentitem)
-
-
-//Add functionality
-//Creates space on DOM to add page buttons
-  const pagination = document.createElement("div");
-  const unorderlist = document.createElement('ul');
-  //add class of Pagination
-  pagination.className = "pagination"; 
+   }
+   
+function showPage(studentItem)
 
 
 
 
-  //adding
 
+
+  
 //for every page add li tages with a page number
 for(const i = 0; i < page; i ++) {
  const li = document.createElement("li")
@@ -77,20 +97,25 @@ for(const i = 0; i < page; i ++) {
      
 //adding buttons
 
-student-item.addEventListener('click', () => {
+studentList.addEventListener('click', () => {
    if (pageDiv.style.display == 'none') {
-      studentItem.textcontent = 'hide list';
+      studentList.textcontent = 'hide list';
       listDiv.style.display = 'block';
    }  else {
       studentItem.textContent = 'show list'
       pageDiv.style.display = 'none';
    }
+
+   addItemButton.addEventListener('click', () => {
+      let ul = document.getElementsByTagName('ul')[0];
+      let li = document.createElement('li');
+      li.textContent = addItemInput.value;
+      ul.appendChild(li); 
      
 }); 
 
-button.addItemButton('click', () => {
- package.innerHTML = input.value + ':';
 
 })};
 
 
+   }}
