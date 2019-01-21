@@ -16,106 +16,70 @@ FSJS project 2 - List Filter and Pagination
    will only be used inside of a function, then it can be locally
    scoped to that function.
 ***/
-const studentItem = document.getElementsByClassName('studentItem');
-const a = studentItem .getElementsByClassName('href');
-const pageDiv = document.querySelector('.pageDiv');
-const button = document.querySelector('button')
-const studentList = document.getElementsByTagName('li')[0];
-const student = document.querySelectorAll('student-item');
-const addItemInput = document.querySelector('input.addItemInput');
-const addItemButton = document.querySelector('button.addItemButton');
-const div = document.createElement('div');
+const allstudents = document.querySelectorAll(".student-item");
+const studentPerPage = 10;
+const numofPages = Math.ceil(allStudents.lengh/ studentPerPage);
 
-
-//the size of the page
-//the size of the page
-
-studentList.addEventListener('click', () => {
-   studentList.textContent = studentList.textContent.hide();
-
-})
-
-studentList.addEventListener('click', () => {
-   studentList.textContent = studentList.textContent.show();
-
-})
-
-
-
-       
-     
-        
-   
-   
-
-
-const appendPageLinks = (link) => {
-   let pa
-   
-   
-   
-   
-   function showPage(list) { 
-   for(let i = 0; i < a.length; i++) {
-       a[i].addEventListener("click", function() {
-         const current = document.getElementsByClassName("active")
-         current[0].className = current[0].className.replace("active", "");
-         this.className += "active";
-       });
-
+function showPage(page) {
+   let upper = page * studentPerPage - 1;
+   let lower = page * studentPerPage - studentPerPage;
+   for(let i = 0; i < allstudents.length; i++) {
+      if(i > = lower && i <= upper) {
+         allstudents[i].getElementsByClassName.display = "block";
+       } else {
+          allstudents[i].getElementsByClassName.display = "none";
        }
-
-  //page
-   //Define range from zero to 9
-   let upper = page * 0;
-   let lower = upper * - 10;
-   for(const i = 0; i <= list.Length; i++) { 
-      if( i >= lower && i <= upper){
-     list(i). style.display = "block"
-      }else {
-       list(i). style.display = "none";
-    
-     }
-  
- 
    }
+
+}
+
+Function appendPageLinks() {
+   let studentPage = document.querySelector('.page');
+   let paginationDiv = document.createElement('div');
+   paginationDiv.classList.remove("pagination");
+   paginationDiv.textContent = "Hallelujah!";
+   studentPage.appendChild(paginationDiv);
+   const ul = document.createElement('ul');
+   paginationDiv.appendChild('ul');
+
+   for(const i = 0; i <= numberOfPagesWeNeed; i ++) {
+      <ul>
+         <li>
+         <a class="active" href="#">1</a>
+         </li>
+         <li>
+         <a href="#">2</a>
+         </li>
+         <li>
+         <a href="#">3</a>
+         </li>
+         <li>
+         <a href="#">4</a>
+         </li>
+         <li>
+         <a href="#">5</a>
+         </li>
+         <li>
+         <a href="#">6</a>
+         </li>
+    </ul>
+
+      document.addEventListener("click", function ();
+         let li = document.createElement('li');
+         li.addEventListener("click", () => {
+            showPage(i);
+            var i = document.getElementById("i");
+            li.appendChild(anchor);
+            ul.appendChild(li);
+
+         });
+
+
+         
    
-function showPage(studentItem)
 
-
-
-
-
-
-  
-//for every page add li tages with a page number
-for(const i = 0; i < page; i ++) {
- const li = document.createElement("li")
-  li.appendChild();   
-
-  
-     
-//adding buttons
-
-studentList.addEventListener('click', () => {
-   if (pageDiv.style.display == 'none') {
-      studentList.textcontent = 'hide list';
-      listDiv.style.display = 'block';
-   }  else {
-      studentItem.textContent = 'show list'
-      pageDiv.style.display = 'none';
+   
+    appendPageLinks();
+    showPage(1)  
+    
    }
-
-   addItemButton.addEventListener('click', () => {
-      let ul = document.getElementsByTagName('ul')[0];
-      let li = document.createElement('li');
-      li.textContent = addItemInput.value;
-      ul.appendChild(li); 
-     
-}); 
-
-
-})};
-
-
-   }}
