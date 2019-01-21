@@ -18,13 +18,13 @@ FSJS project 2 - List Filter and Pagination
 ***/
 const allstudents = document.querySelectorAll(".student-item");
 const studentPerPage = 10;
-const numofPages = Math.ceil(allStudents.lengh/ studentPerPage);
+const numofPages = Math.ceil(allstudents.length/ studentPerPage);
 
 function showPage(page) {
    let upper = page * studentPerPage - 1;
    let lower = page * studentPerPage - studentPerPage;
    for(let i = 0; i < allstudents.length; i++) {
-      if(i > = lower && i <= upper) {
+      if(i >= lower && i <= upper) {
          allstudents[i].getElementsByClassName.display = "block";
        } else {
           allstudents[i].getElementsByClassName.display = "none";
@@ -33,53 +33,34 @@ function showPage(page) {
 
 }
 
-Function appendPageLinks() {
+function appendPageLinks() {
    let studentPage = document.querySelector('.page');
    let paginationDiv = document.createElement('div');
-   paginationDiv.classList.remove("pagination");
-   paginationDiv.textContent = "Hallelujah!";
-   studentPage.appendChild(paginationDiv);
+   paginationDiv.classList.add("pagination");
+   studentPage.append(paginationDiv);
    const ul = document.createElement('ul');
-   paginationDiv.appendChild('ul');
+   paginationDiv.appendChild(ul);
 
-   for(const i = 0; i <= numberOfPagesWeNeed; i ++) {
-      <ul>
-         <li>
-         <a class="active" href="#">1</a>
-         </li>
-         <li>
-         <a href="#">2</a>
-         </li>
-         <li>
-         <a href="#">3</a>
-         </li>
-         <li>
-         <a href="#">4</a>
-         </li>
-         <li>
-         <a href="#">5</a>
-         </li>
-         <li>
-         <a href="#">6</a>
-         </li>
-    </ul>
-
-      document.addEventListener("click", function ();
+   for(let i = 1; i <= numofPages; i++) {
+      
          let li = document.createElement('li');
          li.addEventListener("click", () => {
             showPage(i);
-            var i = document.getElementById("i");
-            li.appendChild(anchor);
-            ul.appendChild(li);
+            });
 
-         });
-
+         let a = document.createElement("a");
+         a.setAttribute("href", "#");
+         a.textContent = i;
 
          
-   
+         
+         
+         
+            li.appendChild(a);
+         ul.appendChild(li);
 
+         }}
    
-    appendPageLinks();
+         appendPageLinks();
     showPage(1)  
     
-   }
