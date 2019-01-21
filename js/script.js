@@ -25,9 +25,9 @@ function showPage(page) {
    let lower = page * studentPerPage - studentPerPage;
    for(let i = 0; i < allstudents.length; i++) {
       if(i >= lower && i <= upper) {
-         allstudents[i].getElementsByClassName.display = "block";
+         allstudents[i].style.display = "block";
        } else {
-          allstudents[i].getElementsByClassName.display = "none";
+          allstudents[i].style.display = "none";
        }
    }
 
